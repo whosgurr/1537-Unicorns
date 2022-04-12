@@ -1,6 +1,6 @@
 function process_res(data){
     console.log(data)
-    $("#result").html(JSON.stringify(data))
+    $("#result").html(JSON.stringify(data,null,2))
 }
 function findUnicornByName(){
     console.log("findUnicornByName()" + "called");
@@ -68,10 +68,8 @@ function findUnicornByFood(){
 
 function filterByNameWeight(){
     console.log("filterByNameWeight()" + "called");
-    recieved_data.map(function (obj_){
     nameIsChecked = "unchecked"
     weightIsChecked = "unchecked"
-    filterList =[]
 
     if($("#unicornNameFilter").is(":checked"))
         nameIsChecked = "checked"
@@ -108,6 +106,7 @@ function setup(){
     $("#findUnicornByName").click(findUnicornByName)
     $("#findUnicornByWeight").click(findUnicornByWeight)
     $("#findUnicornByFood").click(findUnicornByFood)
+    $("#filter").click(filterByNameWeight)
 }
 
 $(document).ready(setup)
