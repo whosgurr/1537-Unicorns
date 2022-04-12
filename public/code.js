@@ -89,8 +89,8 @@ function filterByNameWeight(){
             success: process_res
         }
     )
-        })
-    }
+        }
+    
 
 // function filter(){
 //     recieved_data.map(function (obj_){
