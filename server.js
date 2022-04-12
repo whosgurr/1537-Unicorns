@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.listen(proess.env.PORT || 5001, function (err) {
+app.listen(process.env.PORT || 5001, function (err) {
     if (err)
         console.log(err);
 })
