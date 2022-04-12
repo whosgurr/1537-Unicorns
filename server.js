@@ -81,10 +81,9 @@ app.post("/findUnicornByName", function (req, res) {
     //     foodList.push("apple","carrot")
 
     unicornModel.find({
-        $and: [
-            { weight: {$gt: req.body.lowerWeight}},
-            { weight: {$lt: req.body.higherWeight}},
-        ],
+        loves: {
+            $in: foodList
+        }
     },
         function (err, unicorns) {
         if (err){
