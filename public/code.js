@@ -1,6 +1,6 @@
 function process_res(data){
     console.log(data)
-    $("#result").html(JSON.stringify(data))
+    $("#result").html(JSON.stringify(data,null,'\t'))
 }
 function findUnicornByName(){
     console.log("findUnicornByName()" + "called");
