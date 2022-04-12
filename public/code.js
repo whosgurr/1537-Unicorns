@@ -1,5 +1,6 @@
 function process_res(data){
     console.log(data)
+    $("#result").html(JSON.stringify.data)
 }
 function findUnicornByName(){
     console.log("findUnicornByName()" + "called");
@@ -17,17 +18,6 @@ function findUnicornByName(){
 
 }
 
-function filterByNameWeight(){
-    console.log("filterByNameWeight()" + "called");
-
-    nameIsChecked = "unchecked"
-    weightIsChecked = "unchecked"
-
-    if($("#unicornNameFilter").is(":checked"))
-        nameIsChecked = "checked"
-
-    if($("#unicornWeightFilter").is(":checked"))
-        weightIsChecked = "checked"
 
     $.ajax(
         {
@@ -91,6 +81,30 @@ function findUnicornByFood(){
 
 }
 
+function filterByNameWeight(){
+    console.log("filterByNameWeight()" + "called");
+    recieved_data.map(function (obj_){
+    nameIsChecked = "unchecked"
+    weightIsChecked = "unchecked"
+    filterList =[]
+
+    if($("#unicornNameFilter").is(":checked"))
+        nameIsChecked = "checked"
+
+    if($("#unicornWeightFilter").is(":checked"))
+        weightIsChecked = "checked"
+
+        })
+    }
+
+function filter(){
+    recieved_data.map(function (obj_){
+        aList =[]
+        if()
+            aList.push("name")
+        return aList
+    })
+}
 
 function setup(){
 
