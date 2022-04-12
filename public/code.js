@@ -31,7 +31,6 @@ function findUnicornByName(){
         }
     )
 
-}
 
 
 function findUnicornByWeight(){
