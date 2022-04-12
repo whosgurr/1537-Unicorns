@@ -96,14 +96,14 @@ function filterByNameWeight(){
         })
     }
 
-function filter(){
-    recieved_data.map(function (obj_){
-        aList =[]
-        if()
-            aList.push("name")
-        return aList
-    })
-}
+// function filter(){
+//     recieved_data.map(function (obj_){
+//         aList =[]
+//         if()
+//             aList.push("name")
+//         return aList
+//     })
+// }
 
 function setup(){
 
