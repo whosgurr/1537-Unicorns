@@ -84,6 +84,7 @@ app.post("/findUnicornByName", function (req, res) {
         loves: {
             $in: foodList
         }
+
     },
         function (err, unicorns) {
         if (err){
@@ -97,18 +98,18 @@ app.post("/findUnicornByName", function (req, res) {
   })
 
   app.post("/filterByNameWeight", function (req, res) {
+    recieved_data.map(function (obj_){
     console.log("request has been recieved")
     console.log(req.body.nameIsChecked)
     console.log(req.body.weightIsChecked)
-    nameList = []
-    weightList = []
+    filterList = []
 
     if (req.body.nameIsChecked == "checked")
-        nameList.push("")
+        filterList.push("name")
 
     if (req.body.weightIsChecked == "checked")
-        weightList.push("")
-
+        filterList.push("weight")
+    },
     unicornModel.find({
         $and: [
         {name: req.body.unicornName},
