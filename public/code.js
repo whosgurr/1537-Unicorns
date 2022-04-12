@@ -19,20 +19,6 @@ function findUnicornByName(){
 }
 
 
-    $.ajax(
-        {
-            url: "https://quiet-crag-01632.herokuapp.com/findUnicornByNameWeight",
-            type: "POST",
-            data: {
-                "nameIsChecked": nameIsChecked,
-                "weightIsChecked": weightIsChecked
-            },
-            success: process_res
-        }
-    )
-
-
-
 function findUnicornByWeight(){
     console.log("findUnicornByWeight()" + "called");
     console.log($("#lowerWeight").val())
