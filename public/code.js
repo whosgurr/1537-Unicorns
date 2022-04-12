@@ -93,6 +93,18 @@ function filterByNameWeight(){
     if($("#unicornWeightFilter").is(":checked"))
         weightIsChecked = "checked"
 
+
+    $.ajax(
+        {
+            url: "https://quiet-crag-01632.herokuapp.com/findUnicornByNameWeight",
+            type: "POST",
+            data: {
+                "nameIsChecked": nameIsChecked,
+                "weightIsChecked": weightIsChecked
+            },
+            success: process_res
+        }
+    )
         })
     }
 
