@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
 
-app.listen(5001, function(err){
-    if(err) console.log(err);
+app.listen(proess.env.PORT || 5001, function (err) {
+    if (err)
+        console.log(err);
 })
 
 const bodyparser = require("body-parser");
