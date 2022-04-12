@@ -6,7 +6,7 @@ function findUnicornByName(){
     console.log($("#unicornName").val())
     $.ajax(
         {
-            url: "http://localhost:5001/findUnicornByName",
+            url: "https://quiet-crag-01632.herokuapp.com/findUnicornByName",
             type: "POST",
             data: {
                 "unicornName": $("#unicornName").val()
@@ -31,7 +31,7 @@ function filterByNameWeight(){
 
     $.ajax(
         {
-            url: "http://localhost:5001/findUnicornByFood",
+            url: "https://quiet-crag-01632.herokuapp.com/findUnicornByNameWeight",
             type: "POST",
             data: {
                 "nameIsChecked": nameIsChecked,
@@ -52,7 +52,7 @@ function findUnicornByWeight(){
     
     $.ajax(
         {
-            url: "http://localhost:5001/findUnicornByWeight",
+            url: "https://quiet-crag-01632.herokuapp.com/findUnicornByWeight",
             type: "POST",
             data: {
                 "lowerWeight": $("#lowerWeight").val(),
@@ -79,7 +79,7 @@ function findUnicornByFood(){
 
     $.ajax(
         {
-            url: "http://localhost:5001/findUnicornByFood",
+            url: "https://quiet-crag-01632.herokuapp.com/findUnicornByFood",
             type: "POST",
             data: {
                 "appleIsChecked": appleIsChecked,
