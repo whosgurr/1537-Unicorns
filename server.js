@@ -13,7 +13,7 @@ app.use(bodyparser.urlencoded({
 
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://yuen:bcit@unicorns.r5wge.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://yuen:bcit@unicorns.r5wge.mongodb.net/unicorns?retryWrites=true&w=majority",
 
  {useNewUrlParser: true, useUnifiedTopology: true});
 const unicornSchema = new mongoose.Schema({
