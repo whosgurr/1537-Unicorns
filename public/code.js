@@ -1,19 +1,25 @@
 function process_res(data, nameIsChecked, weightIsChecked){
     console.log(data)
+    nameList = []
+    weightList = []
+    data.forEach(unicorn => {
+        nameList.push(unicorn.name)
+        weightList.push(unicorn.weight)
+        bothList.push(unicorn.name)
+        bothList.push(unicorn.weight)
+        })
+
     if (!nameIsChecked && !weightIsChecked)
         $("#result").html(JSON.stringify(data, null, 2))
+
     if(nameIsChecked && !weightIsChecked)
-        unicorns = JSON.parse(data)
-        console.log(unicorns)
-        $("#result").html(unicorns)
+        $("#result").html(nameList)
+
     if(!nameIsChecked && weightIsChecked)
-        unicorns = JSON.parse(data)
-        console.log(unicorns)
-        $("#result").html(unicorns)
+        $("#result").html(weightList)
+
     if(nameIsChecked && weightIsChecked)
-        unicorns = JSON.parse(data)
-        console.log(unicorns)
-        $("#result").html(unicorns)
+        $("#result").html(bothList)
 }
 function findUnicornByName(){
     console.log("findUnicornByName()" + "called");
