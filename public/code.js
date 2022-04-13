@@ -3,6 +3,38 @@ SAVED_DATA = []
 function process_res(data){
     console.log(data)
     SAVED_DATA = data
+    for (i = 0; i < data.length; i++) {
+        // for each unicorn
+        result += "<table>"
+        result += "<tr>"
+
+        for(field in SAVED_DATA[i]){
+            result += "<th>"
+            result += field
+            result += "</th>"
+        }
+        result += "</tr>"
+        result += "<tr>"
+        for(field in SAVED_DATA[i]){
+            result += "<td>"
+            if(field == "loves"){
+                result += "<ul>"
+                for(j = 0; j < SAVED_DATA[i]["loves"].length; j++){
+                    result += "<li>"
+                    result += SAVED_DATA[i][field][j]
+                    result += "</li>"
+                }
+                result += "</ul>"
+            }else{
+                result += SAVED_DATA[i][field]
+            }
+            result += "</td>"
+        }
+
+        result += "<tr>"
+        result += "</table>"
+    }
+    $("#result").html(result);
     $("#result").html(JSON.stringify(data, null, 2))
 }
 
