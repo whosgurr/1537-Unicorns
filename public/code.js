@@ -84,7 +84,7 @@ function filterByNameWeight(){
     nameList = []
     weightList = []
     bothList = []
-    
+
     SAVED_DATA.forEach(unicorn => {
         nameList.push(unicorn.name)
         weightList.push(unicorn.weight)
@@ -96,13 +96,13 @@ function filterByNameWeight(){
     $("#result").html(JSON.stringify(SAVED_DATA, null, 2))
 
     if(nameIsChecked && !weightIsChecked)
-        $("#result").html(nameList)
+        $("#result").html(nameList.toString())
 
     if(!nameIsChecked && weightIsChecked)
-        $("#result").html(weightList)
+        $("#result").html(weightList.toString())
 
     if(nameIsChecked && weightIsChecked)
-        $("#result").html(bothList)
+        $("#result").html(bothList.toString())
 
         }
     
