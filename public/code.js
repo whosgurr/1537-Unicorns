@@ -41,7 +41,7 @@ function process_res(data){
 
     //     result += "<tr>"
     //     result += "</table>"
-    }
+    // }
     $("#result").html(result);
 
 }
@@ -155,6 +155,15 @@ function filterByNameWeight(){
 //         return aList
 //     })
 // }
+
+var $table = $('#result');
+var mydata = SAVED_DATA
+
+$(function () {
+$('#result').bootstrapTable({
+    data: SAVED_DATA
+});
+});
 
 function setup(){
 
