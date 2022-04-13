@@ -77,7 +77,7 @@ app.post("/findUnicornByName", function (req, res) {
     if (req.body.carrotIsChecked == "checked")
         foodList.push("carrot")
     
-    if (req.body.appleIsChecked == "checked", re.body.carrotIsChecked == "checked")
+    if (req.body.appleIsChecked == "checked" && req.body.carrotIsChecked == "checked")
         foodList.push("apple","carrot")
 
     unicornModel.find({
