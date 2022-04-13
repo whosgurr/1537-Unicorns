@@ -8,23 +8,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="code.js"></script>
-
-  <!-- <style>
-    div#searches {
-      width: 75%;
-      float: left;
-    }
-
-    div#filters {
-      width: 25%;
-      float: left;
-    }
-
-    div#result {
-
-      clear: both;
-    }
-  </style> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <!-- Include the Bootstrap Table CSS
@@ -34,9 +17,13 @@ for the table -->
 </head>
 
 <body>
-  <div id="searches">
+  <header>
     <hr>
-    <h1>Search/Selection</h1>
+    <h1>Unicorn Search</h1>
+    <br>
+  </header>
+
+  <div id="searches">
     <h2> Search for Unicorn by Name</h2>
 
     <!-- <form method="post"> -->
@@ -46,10 +33,11 @@ for the table -->
     <input type="text" id="unicornName" placeholder="Enter Unicorn Name">
     <input type="submit" value="submit" id="findUnicornByName">
     <!-- </form> -->
+    <br>
+    <br>
+    <br>
 
-
-
-    <h2> Or, Search for Unicorn by Weight</h2>
+    <h2> Search for Unicorn by Weight</h2>
 
     <!-- <form method="post"> -->
 
@@ -58,14 +46,15 @@ for the table -->
     <input type="text" id="higherWeight" placeholder="Enter higher limit">
     <input type="submit" value="submit" id="findUnicornByWeight">
     <!-- </form> -->
-
-
-    <h2> Or, Search for Unicorn by Fav. food</h2>
     <br>
+    <br>
+    <br>
+
+    <h2> Search for Unicorn by Fav. Food</h2>
 
     <!-- <form method="post"> -->
 
-    <label>Unicorn Food List</label>
+    <label>Food List</label>
     <br>
     <label for="apple">Apple</label>
     <input type="checkbox" id="apple" >
@@ -73,7 +62,6 @@ for the table -->
     <input type="checkbox" id="carrot" >
     <input type="submit" value="submit" id="findUnicornByFood">
   </div>
-
   <!-- </form> -->
   <div id="filters">
     <hr>
@@ -81,16 +69,18 @@ for the table -->
     <label for="unicornNameFilter">Name</label>
     <input type="checkbox" id="unicornNameFilter" >
 
-    <label for="unicornWeightFilter">weight</label>
+    <label for="unicornWeightFilter">Weight</label>
     <input type="checkbox" id="unicornWeightFilter" >
 
     <input type="submit" value="submit" id="filter">
     <hr>
   </div>
+
   <h1>
     Results
   </h1>
-  <div id="result"></div>
+  <div id="result">
+  </div>
   
 
 </body>
