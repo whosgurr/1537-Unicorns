@@ -14,6 +14,7 @@ function process_res(data){
             result += "<th>"
             result += field 
             result += "</th>"
+            result += "<br>"
         }
         result += "</tr>"
         result += "<tr>"
@@ -25,8 +26,10 @@ function process_res(data){
                     result += "<li>"
                     result += SAVED_DATA[i][field][j]
                     result += "</li>"
+                    result += "<br>"
                 }
                 result += "</ul>"
+                result += "<br>"
             }else{
                 result += SAVED_DATA[i][field]
             }
