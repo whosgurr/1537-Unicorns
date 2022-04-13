@@ -14,7 +14,6 @@ function process_res(data){
             result += "<th>"
             result += field 
             result += "</th>"
-            result += "<br>"
         }
         result += "</tr>"
         result += "<tr>"
@@ -32,11 +31,14 @@ function process_res(data){
                 result += "<br>"
             }else{
                 result += SAVED_DATA[i][field]
+                result += "<br>"
             }
             result += "</td>"
+            result += "<br>"
         }
 
         result += "<tr>"
+        result += "<br>"
         result += "</table>"
     }
     $("#result").html(result);
