@@ -24,21 +24,17 @@ function process_res(data){
                 for(j = 0; j < SAVED_DATA[i]["loves"].length; j++){
                     result += "<li>"
                     result += SAVED_DATA[i][field][j]
+                    result += " "
                     result += "</li>"
-                    result += "<br>"
                 }
                 result += "</ul>"
-                result += "<br>"
             }else{
                 result += SAVED_DATA[i][field]
-                result += "<br>"
             }
             result += "</td>"
-            result += "<br>"
         }
 
         result += "<tr>"
-        result += "<br>"
         result += "</table>"
     }
     $("#result").html(result);
