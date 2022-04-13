@@ -120,9 +120,9 @@ app.post("/findUnicornByName", function (req, res) {
         if (err){
           console.log("Error " + err);
         }else{
-          console.log("Data "+ unicorns);
+          console.log("Data "+ unicorns.weight);
         }
-        res.send(unicorns);
+        res.send(unicorns.weight);
     });
   
   })
