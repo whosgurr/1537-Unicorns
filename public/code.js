@@ -3,11 +3,17 @@ function process_res(data, nameIsChecked, weightIsChecked){
     if (!nameIsChecked && !weightIsChecked)
         $("#result").html(JSON.stringify(data, null, 2))
     if(nameIsChecked && !weightIsChecked)
-        $("#result").html(JSON.parse(data).name)
+        unicorns = JSON.parse(data)
+        console.log(unicorns)
+        $("#result").html(unicorns)
     if(!nameIsChecked && weightIsChecked)
-        $("#result").html(JSON.parse(data).weight)
+        unicorns = JSON.parse(data)
+        console.log(unicorns)
+        $("#result").html(unicorns)
     if(nameIsChecked && weightIsChecked)
-        $("#result").html(JSON.parse(data).name)
+        unicorns = JSON.parse(data)
+        console.log(unicorns)
+        $("#result").html(unicorns)
 }
 function findUnicornByName(){
     console.log("findUnicornByName()" + "called");
