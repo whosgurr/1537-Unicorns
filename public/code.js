@@ -1,6 +1,13 @@
-function process_res(data){
+function process_res(data, nameIsChecked, weightIsChecked){
     console.log(data)
-    $("#result").html(JSON.stringify(data, null, 2))
+    if (!nameIsChecked && !weightIsChecked)
+        $("#result").html(JSON.stringify(data, null, 2))
+    if(nameIsChecked && !weightIsChecked)
+        $("#result").html(JSON.parse(data).name)
+    if(!nameIsChecked && weightIsChecked)
+        $("#result").html(JSON.parse(data).weight)
+    if(nameIsChecked && weightIsChecked)
+        $("#result").html(JSON.parse(data).name)
 }
 function findUnicornByName(){
     console.log("findUnicornByName()" + "called");
@@ -60,35 +67,25 @@ function findUnicornByFood(){
                 "appleIsChecked": appleIsChecked,
                 "carrotIsChecked": carrotIsChecked
             },
-            success: process_res
+            success: filterByNameWeight
         }
     )
 
 }
 
-function filterByNameWeight(){
+function filterByNameWeight(data){
     console.log("filterByNameWeight()" + "called");
-    nameIsChecked = "unchecked"
-    weightIsChecked = "unchecked"
+    nameIsChecked = false
+    weightIsChecked = false
 
     if($("#unicornNameFilter").is(":checked"))
-        nameIsChecked = "checked"
+        nameIsChecked = true
 
     if($("#unicornWeightFilter").is(":checked"))
-        weightIsChecked = "checked"
+        weightIsChecked = true
 
+    process_res(data, nameIsChecked, weightIsChecked)
 
-    $.ajax(
-        {
-            url: "https://quiet-crag-01632.herokuapp.com/findUnicornByNameWeight",
-            type: "POST",
-            data: {
-                "nameIsChecked": nameIsChecked,
-                "weightIsChecked": weightIsChecked
-            },
-            success: process_res
-        }
-    )
         }
     
 
