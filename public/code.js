@@ -13,14 +13,14 @@ function process_res(data){
         for(field in SAVED_DATA[i]){
             result += "<th>"
             result += field 
-            result += "            "
+            result += "        "
             result += "</th>"
         }
         result += "</tr>"
         result += "<tr>"
         for(field in SAVED_DATA[i]){
             result += "<td>"
-            result += "     "
+            result += " "
             if(field == "loves"){
                 result += "<ul>"
                 for(j = 0; j < SAVED_DATA[i]["loves"].length; j++){
