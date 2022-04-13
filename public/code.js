@@ -20,7 +20,7 @@ function process_res(data){
         result += "<tr>"
         for(field in SAVED_DATA[i]){
             result += "<td>"
-            result += "  "
+            result += "     "
             if(field == "loves"){
                 result += "<ul>"
                 for(j = 0; j < SAVED_DATA[i]["loves"].length; j++){
