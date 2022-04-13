@@ -4,7 +4,8 @@ function process_res(data){
     console.log(data)
     SAVED_DATA = data
     result = ""
-    for (i = 0; i < data.length; i++) {
+    
+    for (i = 0; i < SAVED_DATA.length; i++) {
         // for each unicorn
         result += "<table>"
         result += "<tr>"
