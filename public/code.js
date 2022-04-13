@@ -7,8 +7,8 @@ function process_res(data){
     
     for (i = 0; i < SAVED_DATA.length; i++) {
         // for each unicorn
-        result += "<table>"+="<br>"
-        result += "<tr>"+"<br>"
+        result += "<table>"
+        result += "<tr>"
 
         for(field in SAVED_DATA[i]){
             result += "<th>"
