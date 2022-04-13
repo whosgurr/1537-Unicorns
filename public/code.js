@@ -1,27 +1,11 @@
-function process_res(data, nameIsChecked, weightIsChecked){
+SAVED_DATA = []
+
+function process_res(data){
     console.log(data)
-    nameList = []
-    weightList = []
-    bothList = []
-    data.forEach(unicorn => {
-        nameList.push(unicorn.name)
-        weightList.push(unicorn.weight)
-        bothList.push(unicorn.name)
-        bothList.push(unicorn.weight)
-        })
-
-    if (!nameIsChecked && !weightIsChecked)
-        $("#result").html(JSON.stringify(data, null, 2))
-
-    if(nameIsChecked && !weightIsChecked)
-        $("#result").html(nameList)
-
-    if(!nameIsChecked && weightIsChecked)
-        $("#result").html(weightList)
-
-    if(nameIsChecked && weightIsChecked)
-        $("#result").html(bothList)
+    SAVED_DATA = data
+    $("#result").html(JSON.stringify(data, null, 2))
 }
+
 function findUnicornByName(){
     console.log("findUnicornByName()" + "called");
     console.log($("#unicornName").val())
@@ -32,7 +16,7 @@ function findUnicornByName(){
             data: {
                 "unicornName": $("#unicornName").val()
             },
-            success: filterByNameWeight
+            success: process_res
         }
     )
 
@@ -54,7 +38,7 @@ function findUnicornByWeight(){
                 "higherWeight": $("#higherWeight").val()
 
             },
-            success: filterByNameWeight
+            success: process_res
         }
     )
 }
@@ -80,13 +64,13 @@ function findUnicornByFood(){
                 "appleIsChecked": appleIsChecked,
                 "carrotIsChecked": carrotIsChecked
             },
-            success: filterByNameWeight
+            success: process_res
         }
     )
 
 }
 
-function filterByNameWeight(data){
+function filterByNameWeight(){
     console.log("filterByNameWeight()" + "called");
     nameIsChecked = false
     weightIsChecked = false
@@ -97,7 +81,28 @@ function filterByNameWeight(data){
     if($("#unicornWeightFilter").is(":checked"))
         weightIsChecked = true
 
-    process_res(data, nameIsChecked, weightIsChecked)
+    nameList = []
+    weightList = []
+    bothList = []
+    
+    SAVED_DATA.forEach(unicorn => {
+        nameList.push(unicorn.name)
+        weightList.push(unicorn.weight)
+        bothList.push(unicorn.name)
+        bothList.push(unicorn.weight)
+        })
+
+    if (!nameIsChecked && !weightIsChecked)
+    $("#result").html(JSON.stringify(SAVED_DATA, null, 2))
+
+    if(nameIsChecked && !weightIsChecked)
+        $("#result").html(nameList)
+
+    if(!nameIsChecked && weightIsChecked)
+        $("#result").html(weightList)
+
+    if(nameIsChecked && weightIsChecked)
+        $("#result").html(bothList)
 
         }
     
