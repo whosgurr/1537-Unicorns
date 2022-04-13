@@ -32,7 +32,7 @@ function findUnicornByName(){
             data: {
                 "unicornName": $("#unicornName").val()
             },
-            success: process_res
+            success: filterByNameWeight
         }
     )
 
@@ -54,7 +54,7 @@ function findUnicornByWeight(){
                 "higherWeight": $("#higherWeight").val()
 
             },
-            success: process_res
+            success: filterByNameWeight
         }
     )
 }
