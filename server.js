@@ -96,35 +96,5 @@ app.post("/findUnicornByName", function (req, res) {
     });
   
   })
-
-//   app.post("/filterByNameWeight", function (req, res) {
-//     console.log("request has been recieved")
-//     console.log(req.body.nameIsChecked)
-//     console.log(req.body.weightIsChecked)
-//     nameList = []
-//     weightList = []
-
-//     if (req.body.nameIsChecked == "checked")
-//         nameList.push("name")
-
-//     if (req.body.weightIsChecked == "checked")
-//         weightList.push("weight")
-
-//     unicornModel.find({
-//         $and: [
-//         {name: req.body.unicornName},
-//         {weight: req.body.unicornWeight}],
-//     },
-
-//         function (err, unicorns) {
-//         if (err){
-//           console.log("Error " + err);
-//         }else{
-//           console.log("Data "+ unicorns.weight);
-//         }
-//         res.send(unicorns.weight);
-//     });
   
-//   })
-
 app.use(express.static("./public"))
