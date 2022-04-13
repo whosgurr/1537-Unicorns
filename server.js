@@ -82,7 +82,7 @@ app.post("/findUnicornByName", function (req, res) {
 
     unicornModel.find({
         loves: {
-            $in: foodList
+            $all: foodList
         }
 
     },
