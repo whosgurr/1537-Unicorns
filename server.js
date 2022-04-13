@@ -105,12 +105,13 @@ app.post("/findUnicornByName", function (req, res) {
     weightList = []
 
     if (req.body.nameIsChecked == "checked")
-        nameList.push("name")
+        nameList.push(JSON.parse("name"))
 
     if (req.body.weightIsChecked == "checked")
-        weightList.push("weight")
+        weightList.push(JSON.parse("weight"))
 
     unicornModel.find({
+
         $and: [
         {name: req.body.unicornName},
         {weight: req.body.unicornWeight}],
@@ -120,9 +121,9 @@ app.post("/findUnicornByName", function (req, res) {
         if (err){
           console.log("Error " + err);
         }else{
-          console.log("Data "+ unicorns.weight);
+          console.log("Data "+ unicorns);
         }
-        res.send(unicorns.weight);
+        res.send(unicorns);
     });
   
   })
