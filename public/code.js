@@ -3,6 +3,7 @@ SAVED_DATA = []
 function process_res(data){
     console.log(data)
     SAVED_DATA = data
+    result = ""
     for (i = 0; i < data.length; i++) {
         // for each unicorn
         result += "<table>"
@@ -35,7 +36,7 @@ function process_res(data){
         result += "</table>"
     }
     $("#result").html(result);
-    $("#result").html(JSON.stringify(data, null, 2))
+
 }
 
 function findUnicornByName(){
