@@ -2,6 +2,7 @@ function process_res(data, nameIsChecked, weightIsChecked){
     console.log(data)
     nameList = []
     weightList = []
+    bothList = []
     data.forEach(unicorn => {
         nameList.push(unicorn.name)
         weightList.push(unicorn.weight)
